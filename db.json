@@ -1,0 +1,673 @@
+{
+  "expenses": [
+    {
+      "id": "96ed",
+      "expenseId": 1731766099031,
+      "expensePolicyId": "p-1731766099031",
+      "policyLimitStatus": true,
+      "expenseName": "Travels to office",
+      "expenseCategory": "Salaries and Wages",
+      "expenseBills": [
+        {
+          "id": "b-001",
+          "billName": "dummyBill1",
+          "billImage": "image/path1"
+        },
+        {
+          "id": "b-002",
+          "billName": "dummyBill2",
+          "billImage": "image/path2"
+        },
+        {
+          "id": "b-003",
+          "billName": "dummyBill3",
+          "billImage": "image/path3"
+        }
+      ],
+      "expenseSubCategory": "Employee Salary",
+      "expenseAmount": "7000",
+      "expenseCreated": "2024-11-21",
+      "expenseCreatedBy": "u-0001",
+      "expenseApprovedBy": {
+        "approvalStages": 3,
+        "approvalFlow": [
+          {
+            "departmenthead": {
+              "approvalStatus": "approved",
+              "approvalDate": "2024-11-16T14:32:16.665Z",
+              "approverId": "dummyUserId"
+            }
+          },
+          {
+            "hr": {
+              "approvalStatus": "approved",
+              "approvalDate": "2024-11-16T14:32:53.516Z",
+              "approverId": "dummyUserId"
+            }
+          },
+          {
+            "financehead": {
+              "approvalStatus": "pending",
+              "approvalDate": null,
+              "approverId": null
+            }
+          }
+        ]
+      },
+      "selectedApprovalMethod": "advanced",
+      "policyLimit": true,
+      "policyLimitDetails": {
+        "limitAmount": "7000",
+        "subCategory": "Employee Salary",
+        "remarks": "test"
+      }
+    },
+    {
+      "id": "05f1",
+      "expenseId": 1731914679414,
+      "expensePolicyId": "p-1731914679414",
+      "policyLimitStatus": true,
+      "expenseName": "Mentoring Expenses",
+      "expenseCategory": "Travel and Entertainment",
+      "expenseBills": [
+        {
+          "id": "b-001",
+          "billName": "dummyBill1",
+          "billImage": "image/path1"
+        },
+        {
+          "id": "b-002",
+          "billName": "dummyBill2",
+          "billImage": "image/path2"
+        },
+        {
+          "id": "b-003",
+          "billName": "dummyBill3",
+          "billImage": "image/path3"
+        }
+      ],
+      "expenseSubCategory": "Office travels",
+      "expenseAmount": 5000,
+      "expenseCreated": "2024-11-20",
+      "expenseCreatedBy": "u-0001",
+      "expenseApprovedBy": {}
+    },
+    {
+      "id": "031c",
+      "expenseId": 1731919785795,
+      "expensePolicyId": "p-1731919785795",
+      "policyLimitStatus": true,
+      "expenseName": "Food Expense",
+      "expenseCategory": "Travel and Entertainment",
+      "expenseSubCategory": "Office travels",
+      "expenseAmount": 500,
+      "expenseCreated": "2024-11-20",
+      "expenseCreatedBy": "u-0001",
+      "expenseApprovedBy": {},
+      "expenseBills": [
+        {
+          "id": "b-1731919785795",
+          "billName": "dummytest.txt",
+          "billImage": "image/path"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "userId": "u-002",
+      "emailAddress": "jane.smith@example.com",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "userRole": "Employee",
+      "branch": "USA",
+      "department": "Finance",
+      "addedBy": "Admin",
+      "country": "Russia",
+      "status": "Inactive",
+      "id": "3270"
+    },
+    {
+      "id": "c1ed",
+      "userId": "u-010",
+      "emailAddress": "abhay.desai0001@gmail.com",
+      "firstName": "Abhay ",
+      "lastName": "Desai",
+      "userRole": "r-002",
+      "branch": "b-j3vudc4xt",
+      "department": "Product",
+      "addedBy": "admin",
+      "country": "New York",
+      "status": "Active"
+    },
+    {
+      "id": "9564",
+      "userId": "u-643447",
+      "emailAddress": "abhay.desai0001@gmail.com",
+      "firstName": "ABHAY",
+      "lastName": "DESAI",
+      "userRole": "r-002",
+      "branch": "b-2w1v6b3la",
+      "department": "d-5bjqd1l20",
+      "addedBy": "admin",
+      "country": "India",
+      "status": "Active"
+    },
+    {
+      "id": "6767",
+      "userId": "u-863119",
+      "emailAddress": "ankitprakash@gmail.com",
+      "firstName": "Ankit",
+      "lastName": "Prakash",
+      "userRole": "r-002",
+      "branch": "b-sx8k4tqr7",
+      "department": "d-g6x94dduo",
+      "addedBy": "admin",
+      "country": "India",
+      "status": "Active"
+    },
+    {
+      "id": "875a",
+      "userId": "u-978325",
+      "emailAddress": "pankajkumar98@gmail.com",
+      "firstName": "pankaj",
+      "lastName": "kumar",
+      "userRole": "Manager",
+      "branch": "b-sx8k4tqr7",
+      "department": "d-g6x94dduo",
+      "addedBy": "admin",
+      "country": "India",
+      "status": "Inactive"
+    }
+  ],
+  "roles-and-permissions": [
+    {
+      "roleId": "r-002",
+      "roleName": "Department Head",
+      "roleDescription": "Oversees department operations and high-level approvals",
+      "rolePermissions": [
+        {
+          "resource": "expense",
+          "actions": [
+            "view",
+            "approve"
+          ],
+          "conditions": {
+            "amountLimit": 10000
+          }
+        },
+        {
+          "resource": "team",
+          "actions": [
+            "view",
+            "addMember"
+          ],
+          "conditions": {
+            "department": "HR"
+          }
+        }
+      ],
+      "createdBy": "u-002",
+      "createdAt": "2024-10-26",
+      "updatedAt": "2024-10-27",
+      "id": "0944"
+    },
+    {
+      "roleId": "r-003",
+      "roleName": "HR",
+      "roleDescription": "Handles employee records and organizational policies",
+      "rolePermissions": [
+        {
+          "resource": "expense",
+          "actions": [
+            "view"
+          ],
+          "conditions": {}
+        },
+        {
+          "resource": "employeeRecords",
+          "actions": [
+            "view",
+            "update",
+            "create"
+          ],
+          "conditions": {}
+        }
+      ],
+      "createdBy": "u-003",
+      "createdAt": "2024-10-27",
+      "updatedAt": "2024-10-28",
+      "id": "214e"
+    },
+    {
+      "roleId": "r-004",
+      "roleName": "Finance Head",
+      "roleDescription": "Oversees all financial operations and approvals",
+      "rolePermissions": [
+        {
+          "resource": "expense",
+          "actions": [
+            "view",
+            "approve"
+          ],
+          "conditions": {
+            "amountLimit": 20000
+          }
+        },
+        {
+          "resource": "financialReports",
+          "actions": [
+            "view",
+            "generate"
+          ],
+          "conditions": {}
+        }
+      ],
+      "createdBy": "u-004",
+      "createdAt": "2024-10-28",
+      "updatedAt": "2024-10-29",
+      "id": "28f7"
+    },
+    {
+      "roleId": "r-005",
+      "roleName": "Employee",
+      "roleDescription": "Regular employee with limited access",
+      "rolePermissions": [
+        {
+          "resource": "expense",
+          "actions": [
+            "view"
+          ],
+          "conditions": {
+            "amountLimit": 1000
+          }
+        }
+      ],
+      "createdBy": "u-005",
+      "createdAt": "2024-10-30",
+      "updatedAt": "2024-10-31",
+      "id": "820a"
+    },
+    {
+      "id": "c471",
+      "roleName": "Manager",
+      "roleDescription": "Oversees all the activities",
+      "rolePermissions": [
+        {
+          "resource": "teams",
+          "actions": [
+            "create",
+            "view",
+            "update",
+            "approve"
+          ],
+          "conditions": {}
+        },
+        {
+          "resource": "transactions",
+          "actions": [
+            "create"
+          ],
+          "conditions": {}
+        }
+      ]
+    },
+    {
+      "id": "8797",
+      "roleName": "Accountant",
+      "roleDescription": "Oversees the accounts of organization",
+      "rolePermissions": [
+        {
+          "resource": "Expenses",
+          "actions": [
+            "create",
+            "view",
+            "update"
+          ],
+          "conditions": {
+            "amountLimit": "6000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "f7bb",
+      "roleName": "Manager",
+      "roleDescription": "Oversees all the activities",
+      "rolePermissions": [
+        {
+          "resource": "teams",
+          "actions": [
+            "create",
+            "view",
+            "update",
+            "approve"
+          ],
+          "conditions": {}
+        },
+        {
+          "resource": "transactions",
+          "actions": [
+            "create",
+            "update"
+          ],
+          "conditions": {}
+        }
+      ]
+    }
+  ],
+  "expensePolicies": [
+    {
+      "id": "d682",
+      "policyName": "New Stationary policy",
+      "employeeLevel": "Manager",
+      "claimPeriod": "2 Months",
+      "dailyLimit": 300,
+      "monthlyLimit": 10000,
+      "policyCategoryName": "Salaries and Wages",
+      "createdBy": "Manager",
+      "expenseLimits": [
+        {
+          "subcategoryName": "Employee Salary",
+          "limitAmount": "7000"
+        }
+      ],
+      "status": "Active"
+    }
+  ],
+  "spendCategories": [
+    {
+      "id": "1",
+      "categoryName": "Salaries and Wages",
+      "status": "Active",
+      "description": "Monthly employee payroll including bonuses and incentives",
+      "createdBy": "u-001",
+      "subCategories": [
+        {
+          "subCategoryName": "Employee Salary",
+          "description": "Employee monthly salary"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "categoryName": "Travel and Entertainment",
+      "status": "Inactive",
+      "description": "Expenses for business trips, including transportation and lodging",
+      "createdBy": "u-002",
+      "subCategories": [
+        {
+          "subCategoryName": "Office travels",
+          "description": "Travelling for office meetings"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "categoryName": "Office Supplies and Equipment",
+      "status": "Active",
+      "description": "Office stationery, supplies, and minor equipment purchases",
+      "createdBy": "u-003",
+      "subCategories": []
+    }
+  ],
+  "branches": [
+    {
+      "id": "a438",
+      "organizationId": "dummy-org-id",
+      "organizationBranches": [
+        {
+          "branchId": "b-j3vudc4xt",
+          "branchName": "acme corp 1",
+          "branchCountry": "Australia",
+          "branchState": "Amsterdam",
+          "branchPincode": "4530101",
+          "status": "Inactive",
+          "branchDepartments": [
+            "d-001"
+          ]
+        },
+        {
+          "branchId": "b-2w1v6b3la",
+          "branchName": "acme corp 2",
+          "branchCountry": "Australia",
+          "branchState": "Amsterdam",
+          "branchPincode": "4530101",
+          "status": "Active",
+          "branchDepartments": [
+            "d-002",
+            "d-5bjqd1l20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5e96",
+      "organizationId": "dummy-org-id",
+      "organizationBranches": [
+        {
+          "branchId": "b-fkp4ajzij",
+          "branchName": "acme corp 3",
+          "branchCountry": "India",
+          "branchState": "Bangalore",
+          "branchPincode": "560032",
+          "status": "Active",
+          "branchDepartments": [
+            "d-003"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4289",
+      "organizationId": "dummy-org-id",
+      "organizationBranches": [
+        {
+          "branchId": "b-8pzl4viet",
+          "branchName": "acme corp branch I",
+          "branchCountry": "India",
+          "branchState": "Bangalore",
+          "branchPincode": "560043",
+          "status": "Active",
+          "branchDepartments": [
+            "d-004"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0ec2",
+      "organizationId": "dummy-org-id",
+      "organizationBranches": [
+        {
+          "branchId": "b-sx8k4tqr7",
+          "branchName": "acme corp 5",
+          "branchCountry": "India",
+          "branchState": "Arunachal Pradesh",
+          "branchPincode": "560032",
+          "status": "Active",
+          "branchDepartments": [
+            "d-005",
+            "d-g6x94dduo"
+          ]
+        }
+      ]
+    }
+  ],
+  "departments": [
+    {
+      "id": "d-001",
+      "branchId": "dummy-org-id",
+      "departmentName": "Human Resources",
+      "departmentHead": "Alice Johnson",
+      "departmentBranch": "Head Office",
+      "status": "Inactive",
+      "departmentTeams": [
+        {
+          "teamId": "t-001",
+          "teamName": "Recruitment",
+          "teamLead": "Sam Clark"
+        },
+        {
+          "teamId": "t-002",
+          "teamName": "Employee Relations",
+          "teamLead": "Dana White"
+        }
+      ]
+    },
+    {
+      "id": "d-002",
+      "branchId": "dummy-org-id",
+      "departmentName": "Accountant",
+      "departmentHead": "Bob Lee",
+      "departmentBranch": "Branch Office 1",
+      "status": "Active",
+      "departmentTeams": [
+        {
+          "teamId": "t-003",
+          "teamName": "Accounts",
+          "teamLead": "Emma Watson"
+        },
+        {
+          "teamId": "t-004",
+          "teamName": "Auditing",
+          "teamLead": "Oliver Brown"
+        }
+      ]
+    },
+    {
+      "id": "d-5bjqd1l20",
+      "branchId": "b-2w1v6b3la",
+      "departmentName": "Product",
+      "departmentHead": "John Doe",
+      "departmentBranch": "acme corp 2",
+      "status": "Active",
+      "departmentTeams": []
+    },
+    {
+      "id": "d-g6x94dduo",
+      "branchId": "b-sx8k4tqr7",
+      "departmentName": "Development",
+      "departmentHead": "Abhay Desai",
+      "departmentBranch": "acme corp 5",
+      "status": "Active",
+      "departmentTeams": [
+        {
+          "teamId": "t-1731775985195",
+          "teamName": "Development",
+          "teamLead": "John Doe"
+        },
+        {
+          "teamId": "t-1731776390893",
+          "teamName": "Development",
+          "teamLead": "John Doe"
+        },
+        {
+          "teamId": "t-1731880351178",
+          "teamName": "Finance",
+          "teamLead": "John Doe"
+        }
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "id": "t-1731880351178",
+      "teamName": "Finance",
+      "branchId": "b-sx8k4tqr7",
+      "departmentId": "d-g6x94dduo",
+      "teamLead": "John Doe",
+      "status": "Active",
+      "numOfMembers": 2,
+      "teamMembers": [
+        {
+          "id": "c1ed",
+          "firstName": "Abhay ",
+          "lastName": "Desai"
+        },
+        {
+          "id": "3270",
+          "firstName": "Jane",
+          "lastName": "Smith"
+        }
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "id": "org-1731880258558",
+      "organisationInformation": {
+        "firstName": "ABHAY",
+        "lastName": "DESAI",
+        "contactCode": "+91",
+        "mobileNumber": "9987897999",
+        "companyName": "recoursetech",
+        "emailAddress": "abhay@gmail.com",
+        "numOfEmployees": "800",
+        "companyWebsite": "recoursetech.com",
+        "country": "India",
+        "domainName": "recoursetech",
+        "affiliatedToRegulatory": false,
+        "regulatorName": "",
+        "organizationStatus": "Active"
+      },
+      "organisationDocuments": {
+        "taxNumber": "TRDRD67157878",
+        "tradeLicense": "dummytest.txt",
+        "memorandum": "dummytest.txt",
+        "incorporationCert": "dummytest.txt",
+        "incumbencyCert": "dummytest.txt"
+      },
+      "shareholder": {
+        "type": "individual",
+        "firstName": "ABHAY",
+        "lastName": "DESAI",
+        "contactCode": "+91",
+        "mobileNumber": "9098789798",
+        "email": "abhay@gmail.com",
+        "residentialAddress": "Gzhskakak",
+        "passport": "dummytest.txt",
+        "emiratesId": "dummytest.txt",
+        "companyDocuments": {
+          "tradeLicense": "dummy-tradeLicense.pdf",
+          "memorandum": "dummy-memorandum.pdf",
+          "incorporationCert": "dummy-incorporationCert.pdf",
+          "incumbencyCert": "dummy-incumbencyCert.pdf"
+        }
+      },
+      "directorDetails": {
+        "firstName": "ABHAY",
+        "lastName": "DESAI",
+        "contactCode": "+91",
+        "mobileNumber": "8798798999",
+        "emailAddress": "abhay@gmail.com",
+        "residentialAddress": "Gzhskakak",
+        "passport": "dummytest.txt",
+        "emiratesId": "dummytest.txt"
+      },
+      "authorisedSignatory": {
+        "firstName": "ABHAY",
+        "lastName": "DESAI",
+        "contactCode": "+91",
+        "mobileNumber": "8798797999",
+        "emailAddress": "abhay@gmail.com",
+        "residentialAddress": "Gzhskakak",
+        "passport": "dummy-passport.pdf",
+        "emiratesId": "dummy-emiratesId.pdf"
+      }
+    }
+  ],
+  "approvals": [
+    {
+      "id": "6e8e",
+      "approvalName": "Expenses",
+      "approvalFor": "expenses",
+      "approvalHierarchy": [
+        "Department Head",
+        "Finance Head",
+        "Manager"
+      ],
+      "stages": 3
+    }
+  ]
+}
